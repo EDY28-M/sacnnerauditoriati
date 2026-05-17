@@ -1,0 +1,30 @@
+[Unit]
+Description=Security Audit Platform
+After=network.target mysqld.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/paginasweb/security-audit-platform
+ExecStart=/usr/local/bin/pnpm dev
+Restart=on-failure
+RestartSec=5
+Environment="NODE_ENV=development"
+Environment="PORT=5000"
+Environment="DATABASE_URL=mysql://audit_user:AuditSecure2024!@localhost:3306/security_audit_db"
+Environment="JWT_SECRET=kwXZYT4SHScFpwdTDrLMKF"
+Environment="OAUTH_SERVER_URL=https://api.manus.im"
+Environment="OWNER_OPEN_ID=aTV4G9XRfAQarABNyBKV4g"
+Environment="OWNER_NAME=Junior Edinson Matias Bardales"
+Environment="VITE_APP_ID=R7Nqp9QDATNyVE92wxwnGx"
+Environment="VITE_APP_TITLE=Security Audit Platform"
+Environment="VITE_OAUTH_PORTAL_URL=https://manus.im"
+Environment="BUILT_IN_FORGE_API_KEY=NkX3vjvaW6X9476J2SQziX"
+Environment="BUILT_IN_FORGE_API_URL=https://forge.manus.ai"
+Environment="VITE_FRONTEND_FORGE_API_KEY=DU3aTggVWzTgp5b9k559bu"
+Environment="VITE_FRONTEND_FORGE_API_URL=https://forge.manus.ai"
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

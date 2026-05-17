@@ -1,0 +1,26 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [
+    "server",
+    "db",
+    "user"
+  ],
+  "dev_command": "pnpm run dev",
+  "env_vars": {
+    "DATABASE_URL": "REDACTED - use .env file"
+  },
+  "experiments": [
+    "no_db_push"
+  ],
+  "git_remote": {
+    "note": "Credentials removed for security - do not commit secrets here"
+  },
+  "name": "security-audit-platform",
+  "path": "/home/ubuntu/security-audit-platform",
+  "port": 3000,
+  "secrets": {
+    "note": "All secrets moved to .env file - do not commit secrets here"
+  },
+  "template_id": "web-db-user",
+  "test_command": "pnpm test"
+}
