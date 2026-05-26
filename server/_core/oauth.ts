@@ -78,15 +78,20 @@ export function registerOAuthRoutes(app: Express) {
       const isOwner = email.toLowerCase() === (ENV.ownerOpenId || "").toLowerCase() || 
                       openId === ENV.ownerOpenId;
 
+      // Hacer admin si el correo es de administración (como admin@keraai.online)
+      const isAdmin = email.toLowerCase() === "admin@keraai.online" || 
+                      email.toLowerCase().startsWith("admin@");
+
       await db.upsertUser({
         openId,
         name: email.split("@")[0],
         email,
         loginMethod: "local",
         lastSignedIn: new Date(),
+        role: isAdmin ? "admin" : "viewer",
       });
 
-      // Hacer admin al primer usuario / al owner configurado
+      // Recuperar usuario
       const user = await db.getUserByOpenId(openId);
 
       const sessionToken = await sdk.createSessionToken(openId, {

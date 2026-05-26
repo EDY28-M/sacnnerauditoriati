@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "openId": "aTV4G9XRfAQarABNyBKV4g",
+    "name": "Junior Edinson Matias Bardales",
+    "email": "admin@keraai.online",
+    "loginMethod": "bypass",
+    "role": "admin",
+    "createdAt": "2026-05-15T19:54:29.000Z",
+    "updatedAt": "2026-05-17T06:19:02.000Z",
+    "lastSignedIn": "2026-05-17T06:19:02.000Z"
+  },
+  {
+    "id": 283,
+    "openId": "local_anVuaW9yZWRpbnNv",
+    "name": "junioredinsonmatiasbardales",
+    "email": "junioredinsonmatiasbardales@gmail.com",
+    "loginMethod": "local",
+    "role": "viewer",
+    "createdAt": "2026-05-17T06:42:16.000Z",
+    "updatedAt": "2026-05-25T16:08:04.000Z",
+    "lastSignedIn": "2026-05-25T16:08:04.000Z"
+  },
+  {
+    "id": 354,
+    "openId": "local_YWRtaW5Aa2VyYWFp",
+    "name": "admin",
+    "email": "admin@keraai.online",
+    "loginMethod": "local",
+    "role": "viewer",
+    "createdAt": "2026-05-25T16:08:38.000Z",
+    "updatedAt": "2026-05-25T16:18:50.000Z",
+    "lastSignedIn": "2026-05-25T16:18:50.000Z"
+  }
+]
